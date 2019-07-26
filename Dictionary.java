@@ -1,114 +1,116 @@
 import java.util.ArrayList;
 
 class Dictionary {
-    Dictionary(){}
 
-    private ArrayList<String> japanese = new ArrayList<>();
+    private ArrayList<String> romaji = new ArrayList<>();
     private ArrayList<String> english = new ArrayList<>();
+    private ArrayList<String> kana = new ArrayList<>();
 
     void addLevel(int level) {
         switch (level) {
             case (1): {
-                japanese.add("ookii");
+                kana.add("大きい");
+                romaji.add("ookii");
                 english.add("big");
-                japanese.add("chiisai");
+                kana.add("小さい");
+                romaji.add("chiisai");
                 english.add("small");
-                japanese.add("takai");
+                romaji.add("takai");
                 english.add("expensive");
-                japanese.add("yasui");
+                romaji.add("yasui");
                 english.add("cheap");
-                japanese.add("atarashii");
+                romaji.add("atarashii");
                 english.add("new");
-                japanese.add("furui");
+                romaji.add("furui");
                 english.add("old");
-                japanese.add("ii");
+                romaji.add("ii");
                 english.add("good");
-                japanese.add("warui");
+                romaji.add("warui");
                 english.add("bad");
-                japanese.add("muzukashii");
+                romaji.add("muzukashii");
                 english.add("hard/difficult");
-                japanese.add("yasashii");
+                romaji.add("yasashii");
                 english.add("easy/gentle");
-                japanese.add("tooi");
+                romaji.add("tooi");
                 english.add("far");
-                japanese.add("chikai");
+                romaji.add("chikai");
                 english.add("near/close");
-                japanese.add("oishii");
+                romaji.add("oishii");
                 english.add("tasty/delicious");
-                japanese.add("mazui");
+                romaji.add("mazui");
                 english.add("bad-tasting");
-                japanese.add("isogashii");
+                romaji.add("isogashii");
                 english.add("busy");
                 break;
             }
             case (2): {
-                japanese.add("atsui");
+                romaji.add("atsui");
                 english.add("hot (weather)");
-                japanese.add("samui");
+                romaji.add("samui");
                 english.add("cold (weather)");
-                japanese.add("tsumetai");
+                romaji.add("tsumetai");
                 english.add("cold (drink)");
-                japanese.add("atatakai");
+                romaji.add("atatakai");
                 english.add("warm (drink)");
-                japanese.add("suzushii");
+                romaji.add("suzushii");
                 english.add("cool (weather)");
-                japanese.add("mushiatsui");
+                romaji.add("mushiatsui");
                 english.add("humid (weather)");
-                japanese.add("katai");
+                romaji.add("katai");
                 english.add("hard (food)");
-                japanese.add("yawarakai");
+                romaji.add("yawarakai");
                 english.add("soft (food)");
-                japanese.add("omoshiroi");
+                romaji.add("omoshiroi");
                 english.add("interesting/fun");
-                japanese.add("tsumaranai");
+                romaji.add("tsumaranai");
                 english.add("boring");
-                japanese.add("asai");
+                romaji.add("asai");
                 english.add("shallow");
-                japanese.add("fukai");
+                romaji.add("fukai");
                 english.add("deep");
-                japanese.add("hiroi");
+                romaji.add("hiroi");
                 english.add("wide/spacious");
-                japanese.add("semai");
+                romaji.add("semai");
                 english.add("narrow");
                 break;
             }
             case (3): {
-                japanese.add("takai");
+                romaji.add("takai");
                 english.add("high/tall");
-                japanese.add("hikui");
+                romaji.add("hikui");
                 english.add("low");
-                japanese.add("nagai");
+                romaji.add("nagai");
                 english.add("long");
-                japanese.add("mijikai");
+                romaji.add("mijikai");
                 english.add("short");
-                japanese.add("hayai");
+                romaji.add("hayai");
                 english.add("fast/early");
-                japanese.add("osoi");
+                romaji.add("osoi");
                 english.add("slow/late");
-                japanese.add("omoi");
+                romaji.add("omoi");
                 english.add("heavy (object)");
-                japanese.add("karui");
+                romaji.add("karui");
                 english.add("light (object)");
-                japanese.add("tsuyoi");
+                romaji.add("tsuyoi");
                 english.add("strong");
-                japanese.add("yowai");
+                romaji.add("yowai");
                 english.add("weak");
-                japanese.add("kurai");
+                romaji.add("kurai");
                 english.add("dark");
-                japanese.add("akarui");
+                romaji.add("akarui");
                 english.add("bright/cheerful");
-                japanese.add("kowai");
+                romaji.add("kowai");
                 english.add("scary");
-                japanese.add("kawai");
+                romaji.add("kawai");
                 english.add("cute");
-                japanese.add("nemui");
+                romaji.add("nemui");
                 english.add("sleepy");
-                japanese.add("kusai");
+                romaji.add("kusai");
                 english.add("stinky");
                 break;
             }
             default: {
-                japanese.add("karappo");
+                romaji.add("karappo");
                 english.add("empty");
                 break;
             }
@@ -119,7 +121,11 @@ class Dictionary {
         return english;
     }
 
-    ArrayList<String> getJapaneseDictionary() {
-        return japanese;
+    ArrayList<String> getRomajiDictionary() {
+        return romaji;
+    }
+
+    ArrayList<String> getKanaDictionary() {
+        return kana;
     }
 }
