@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
 class Dictionary {
+    Dictionary(){}
 
     private ArrayList<String> japanese = new ArrayList<>();
     private ArrayList<String> english = new ArrayList<>();
@@ -33,7 +34,7 @@ class Dictionary {
                 japanese.add("chikai");
                 english.add("near/close");
                 japanese.add("oishii");
-                english.add("tasty");
+                english.add("tasty/delicious");
                 japanese.add("mazui");
                 english.add("bad-tasting");
                 japanese.add("isogashii");
