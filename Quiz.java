@@ -32,9 +32,10 @@ public class Quiz {
             } else {
                 System.out.println("wrong");
                 correctFlag = false;
-                errorNumber++;
-                errorList.add(english.get(randomIndex));
-            }
+                if(!errorList.contains(english.get(randomIndex))) {
+                    errorNumber++;
+                    errorList.add(english.get(randomIndex));
+                }
 
         }
         if (!errorList.isEmpty()) {
