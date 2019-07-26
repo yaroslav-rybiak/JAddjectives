@@ -1,41 +1,46 @@
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.Random;
 
-public class Quiz {
+class Quiz {
+    Quiz(){}
 
     public static void main(String[] args) {
         Dictionary dictionary = new Dictionary();
         dictionary.addLevel(1);
-        dictionary.addLevel(2);
-        dictionary.addLevel(3);
-        List<String> japanese = dictionary.getJapaneseDictionary();
-        List<String> english = dictionary.getEnglishDictionary();
+//        dictionary.addLevel(2);
+//        dictionary.addLevel(3);
+
+        ArrayList<String> answerDictionary = dictionary.getEnglishDictionary();
+        ArrayList<String> questionDictionary = dictionary.getJapaneseDictionary();
 
         Scanner scanner = new Scanner(System.in);
         boolean correctFlag = true;
         int randomIndex = 0;
         int errorNumber = 0;
-        List<String> errorList = new ArrayList<>();
+        ArrayList<String> errorList = new ArrayList<>();
 
-        while (!japanese.isEmpty()) {
+        while (!answerDictionary.isEmpty()) {
             Random rand = new Random();
-            if(japanese.size() > 1 && correctFlag) {
-                randomIndex = rand.nextInt(japanese.size());
-            } else if(japanese.size() == 1 && correctFlag) {
+            if(answerDictionary.size() > 1 && correctFlag) {
+                randomIndex = rand.nextInt(answerDictionary.size());
+            } else if(answerDictionary.size() == 1 && correctFlag) {
                 randomIndex = 0;
             }
-            System.out.println(english.get(randomIndex));
+            System.out.println(questionDictionary.get(randomIndex));
             String input = scanner.nextLine();
-            if(input.equals(japanese.get(randomIndex))) {
-                japanese.remove(randomIndex);
-                english.remove(randomIndex);
+            if(answerDictionary.get(randomIndex).contains(input)) {
+                answerDictionary.remove(randomIndex);
+                questionDictionary.remove(randomIndex);
                 correctFlag = true;
             } else {
                 System.out.println("wrong");
                 correctFlag = false;
-                if(!errorList.contains(english.get(randomIndex))) {
+                if(!errorList.contains(questionDictionary.get(randomIndex))) {
                     errorNumber++;
-                    errorList.add(english.get(randomIndex));
+                    errorList.add(questionDictionary.get(randomIndex));
                 }
+            }
 
         }
         if (!errorList.isEmpty()) {
