@@ -55,7 +55,7 @@ class Dictionary {
                 english.add("humid (weather)");
                 japanese.add("katai");
                 english.add("hard (food)");
-                japanese.add("yawaranai");
+                japanese.add("yawarakai");
                 english.add("soft (food)");
                 japanese.add("omoshiroi");
                 english.add("interesting/fun");
