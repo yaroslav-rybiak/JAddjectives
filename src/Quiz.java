@@ -6,9 +6,9 @@ class Quiz {
 
     public static void main(String[] args) {
         Dictionary dictionary = new Dictionary();
-        dictionary.addLevel(1);
+//        dictionary.addLevel(1);
         dictionary.addLevel(2);
-        dictionary.addLevel(3);
+//        dictionary.addLevel(3);
 
         ArrayList<String> answerDictionary = dictionary.getEnglishDictionary();
         ArrayList<String> questionDictionary = dictionary.getKanaDictionary();
